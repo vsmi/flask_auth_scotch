@@ -2,8 +2,9 @@
 
 {% extends "base.html" %}
 
+
 {% block content %}
-<div class="column is-4 is-offset-4">
+<div class="column is-4 is-offset-4">    
     <h3 class="title">Регистрация</h3>
     <div class="box">
         {% with messages = get_flashed_messages() %}
@@ -16,13 +17,14 @@
         <form method="POST" action="/signup">
             <div class="field">
                 <div class="control">
-                    <input class="input is-large" type="email" name="email" placeholder="Почта" autofocus="">
+                    <input class="input is-large" type="email" name="email" placeholder="e-mail" autofocus="" >
                 </div>
+                <h1 style= "color:green">Обязательное поле</h1>
             </div>
 
             <div class="field">
                 <div class="control">
-                    <input class="input is-large" type="text" name="name" placeholder="Имя" autofocus="">
+                    <input class="input is-large" type="text" name="name" placeholder="Name" autofocus="">
                 </div>
             </div>
 
@@ -30,15 +32,17 @@
                 <div class="control">
                     <input class="input is-large" type="password" name="password" placeholder="Пароль">
                 </div>
+                <h1 style= "color:green">Обязательное поле</h1>
             </div>
 <!-- Баг, нет проверки на совпадение пароля-->
             <div class="field">
                 <div class="control">
                     <input class="input is-large" type="password" name="password" placeholder="Подтвердите пароль">
                 </div>
+                <h1 style= "color:green">Обязательное поле</h1>
             </div>
-
-            <button class="button is-block is-info is-large is-fullwidth">Регистрация</button>
+<!--Неприметная кнопка-->
+            <button style = "color: blue;" class="button is-block is-info ">Регистрация</button> <!--is-large is-fullwidth-->
         </form>
     </div>
 </div>
